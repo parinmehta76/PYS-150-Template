@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PYS 150 Yes YoU Can</title>
+    <!-- Favicon -->
+    <link href="kalash-logo-ld.jpg" id="faviconImg" rel="shortcut icon" />
+    <link rel="stylesheet" href="custom.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="PYS 150 Yes You Can" />
+    <meta name="author" content="Kalash Infotech" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XYVKNM3RBC"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-XYVKNM3RBC");
+    </script>
+    <style>
+      body {
+        text-align: center;
+        background: linear-gradient(rgb(255, 103, 1), white, green);
+        /* background-image: url("logo.png");
+        background-repeat: no-repeat; */
+      }
+
+      .container {
+        position: relative;
+      }
+
+      .topleft {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+        font-size: 18px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        opacity: 0.3;
+      }
+
+      #final_result_div {
+        /* display: none; */
+        display: -webkit-flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        align-items: flex-end;
+        width: 1080px;
+        height: 1194px;
+        background-image: url(template.png);
+      }
+
+      #name_div {
+        height: 89px;
+        width: 450px;
+        margin-right: 300px;
+        padding-top: 52px;
+        text-align: center;
+        overflow: wrap;
+        font-size: 47px;
+        /* text-transform: uppercase; */
+        color: blue;
+        font-family: Optima;
+        line-height: 1;
+        font-weight: bold;
+      }
+
+      #cropped_circle_image {
+        display: block;
+        width: 345px;
+        height: 345px;
+        margin-right: 346px;
+        margin-top: 693px;
+        background: #e6e7ed;
+        -moz-border-radius: 180px;
+        -webkit-border-radius: 180px;
+        background-image: url();
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid black;
+      }
+
+      #message_2 {
+        padding-top: 5px;
+      }
+    </style>
+  </head>
+
+  <body onload="set_offsets_for_final_result()" class="area">
+    <div class="container">
+      <img src="logo.png" alt="PYS Logo" />
+      <div class="topleft"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="d-flex justify-content-center" id="spinner_container">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="container" style="opacity: 0">
+          <div class="row" style="padding-bottom: 15px !important">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+              <div
+                id="CounterVisitor"
+                style="
+                  background-color: peachpuff;
+                  font-size: 21px;
+                  border-radius: 15px;
+                "
+              ></div>
+            </div>
+
+            <div class="col-md-4"></div>
+          </div>
+          <div class="row">
+            <h2>
+              PYS 150 Yes You Can !<br />
+              <!-- <b>"Shashan Vandana"</b> -->
+            </h2>
+          </div>
+          <form action="/action_page.php">
+            <div class="form-group">
+              <label for="username">Type your name</label>
+              <input
+                class="form-control mT-10"
+                id="username"
+                placeholder="Enter name"
+                name="username"
+              />
+            </div>
+            <div class="form-group mT-10">
+              <label for="userfile">Upload your photo</label>
+              <input
+                type="file"
+                class="form-control mT-10"
+                id="file-input"
+                name="userfile"
+              />
+            </div>
+            <div class="form-group mT-10">
+              <button
+                type="button mT-10"
+                class="btn btn-primary save"
+                id="downloadBtn"
+                disabled
+              >
+                Click to download
+              </button>
+            </div>
+          </form>
+          <p id="message_2">
+            After downloading this image, please share it on Facebook, WhatsApp,
+            Instagram and all other social media accounts
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="final_result_div" style="opacity: 0">
+              <div id="cropped_circle_image"></div>
+              <div id="name_div"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let croppedImageWidth = 210;
+    let upload = document.querySelector("#file-input");
+
+    upload.addEventListener("change", (e) => {
+      downloadBtn = document.getElementById("downloadBtn");
+      downloadBtn.disabled = true;
+      console.log("Disabling");
+      if (e.target.files.length) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          if (e.target.result) {
+            document.getElementById(
+              "cropped_circle_image"
+            ).style.backgroundImage = "url(" + e.target.result + ")";
+            console.log("Enabling download button");
+            downloadBtn.disabled = false;
+          }
+        };
+        reader.readAsDataURL(e.target.files[0]);
+      }
+    });
+
+    document.querySelector(".save").addEventListener("click", (e) => {
+      document.getElementById("downloadBtn").disabled = true;
+      document.getElementById("downloadBtn").innerHTML = "Downloading...";
+
+      e.preventDefault();
+      // Set name
+      let nameDiv = document.getElementById("name_div");
+      nameDiv.innerHTML = document.getElementById("username").value;
+
+      // Remove div from last time if present
+      let existingCanvas = document.getElementsByTagName("canvas")[0];
+      if (existingCanvas) {
+        existingCanvas.parentNode.removeChild(existingCanvas);
+      }
+
+      var node = document.getElementById("final_result_div");
+      node.style.opacity = "1.0";
+
+      html2canvas(document.querySelector("#final_result_div"), {
+        allowTaint: true,
+      }).then((canvas) => {
+        document.body.appendChild(canvas);
+
+        // Hide both divs
+        document.getElementById("final_result_div").style.opacity = "0";
+        document.getElementsByTagName("canvas")[0].style.opacity = "0";
+
+        var link = document.createElement("a");
+        link.download = "Har-Ghar-Tiranga.jpg";
+        link.href = document.getElementsByTagName("canvas")[0].toDataURL();
+        link.click();
+
+        document.getElementById("downloadBtn").disabled = false;
+        document.getElementById("downloadBtn").innerHTML = "Click to download";
+      });
+    });
+
+    // Called onload to set the position of the name and image divs
+    function set_offsets_for_final_result() {
+      var img = new Image();
+      img.onload = function () {
+        document.getElementsByClassName("container")[0].style.opacity = 1;
+        document.getElementById("spinner_container").style.opacity = 0;
+
+        document.getElementById("downloadBtn").disabled = false;
+      };
+      img.src = "template.png";
+      if (img.complete) img.onload();
+    }
+
+    var n = localStorage.getItem("on_load_counter");
+
+    if (n === null) {
+      n = 1508;
+    }
+    n++;
+
+    localStorage.setItem("on_load_counter", n);
+
+    nums = n.toString();
+    document.getElementById("CounterVisitor").innerHTML = "";
+
+    document.getElementById("CounterVisitor").innerHTML +=
+      'TOTAL DOWNLOADS : <span class="counter-item">' + nums + "</span>";
+  </script>
+</html>
