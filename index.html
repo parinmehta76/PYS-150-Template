@@ -27,10 +27,21 @@
 
     <style>
       body {
-        text-align: center;
-        background: linear-gradient(rgb(9, 215, 188), rgb(5, 63, 155));
+        text-align: left;
+        background: linear-gradient(white);
         /* background-image: url("logo.png");
         background-repeat: no-repeat; */
+      }
+
+      label {
+        display: inline-block;
+        /* width: 150px; */
+        text-align: left;
+        color: #0f3fed;
+      }
+
+      button {
+        margin-top: 15px;
       }
 
       .container {
@@ -80,9 +91,9 @@
         border: 1px solid black;
       }
 
-      #message_2 {
+      /* #message_2 {
         padding-top: 5px;
-      }
+      } */
     </style>
   </head>
 
@@ -112,27 +123,66 @@
             <div class="col-md-4"></div>
           </div>
           <div class="row">
-            <p>
-              Starting from 2nd September 2010 , PYS is now on the verge of
-              acheiving yet another Milestone ie PYS 150 on 13 November 2022.
-            </p>
-            <p>
-              Lets celebrate this occasion and show our support for PYS 150 by downloading PYS-150 Frame
-            </p>
-              
-            <p>
-              Guidelines for image to upload
-            </p>
-            <p>
-              Image should be ONLY yours individual photo in decent attire
-            </p>
-            <p>
-              Any misuse of the frame shall attract Sections of The Information Technology (IT) Act, 2000.By clicking on download you agree to the terms of use.
-            </p>
-         
+            <h1
+              style="
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 9vw;
+                color: #45089f;
+              "
+            >
+              <b>Frame for PYS-150 </b>
+              <br />
             </h1>
-            <h2>PYS 150 Yes We Can !<br /></h2>
+            <p
+              style="
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 15px;
+              "
+            >
+              Starting from 2nd September 2010 , PYS is now on the verge of
+              acheiving yet another milestone ie PYS 150 on 13 November 2022.
+            </p>
+            <p
+              style="
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 15px;
+              "
+            >
+              Let us all celebrate this occasion and show our excitement for PYS
+              150 by downloading this frame.
+            </p>
+            <h2
+              style="
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 6vw;
+                color: #45089f;
+              "
+            >
+              <u>Guidelines for photo to upload</u>
+            </h2>
+
+            <ul>
+              <li
+                style="
+                  font-size: 14px;
+                  font-family: 'Times New Roman', Times, serif;
+                "
+              >
+                Image should be <b>ONLY</b> your's individual photo in
+                <b>decent outfit</b>.
+              </li>
+              <li
+                style="
+                  font-size: 14px;
+                  font-family: 'Times New Roman', Times, serif;
+                "
+              >
+                Any misuse of this frame shall attract sections of IT Act, 2000.
+              </li>
+            </ul>
+            <br />
           </div>
+
           <form action="/action_page.php">
             <div class="form-group">
               <label for="username">Type your name</label>
@@ -152,6 +202,7 @@
                 name="userfile"
               />
             </div>
+
             <div class="form-group mT-10">
               <button
                 type="button mT-10"
@@ -163,9 +214,25 @@
               </button>
             </div>
           </form>
-          <p id="message_2">
-            After downloading this image, please share it on Facebook, WhatsApp,
-            Instagram and all other social media accounts
+          <p
+            style="
+              font-size: 12px;
+              font-family: 'Times New Roman', Times, serif;
+            "
+          >
+            By clicking on download you agree to comply with guidelines.
+          </p>
+
+          <p
+            style="
+              font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+                serif;
+              font-size: 14px;
+              color: #217e0a;
+            "
+          >
+            After downloading this image, please put this as your display or
+            status on Facebook, WhatsApp, Instagram to celebrate PYS 150
           </p>
         </div>
         <!-- <i class="fa-brands fa-facebook"></i>   -->
@@ -254,19 +321,19 @@
       if (img.complete) img.onload();
     }
 
-    var n = localStorage.getItem("on_load_counter");
+    // var n = localStorage.getItem("on_load_counter");
 
-    if (n === null) {
-      n = 1508;
-    }
-    n++;
+    // if (n === null) {
+    //   n = 1508;
+    // }
+    // n++;
 
-    localStorage.setItem("on_load_counter", n);
+    // localStorage.setItem("on_load_counter", n);
 
-    nums = n.toString();
-    document.getElementById("CounterVisitor").innerHTML = "";
+    // nums = n.toString();
+    // document.getElementById("CounterVisitor").innerHTML = "";
 
-    document.getElementById("CounterVisitor").innerHTML +=
-      'TOTAL DOWNLOADS : <span class="counter-item">' + nums + "</span>";
+    // document.getElementById("CounterVisitor").innerHTML +=
+    //   'TOTAL DOWNLOADS : <span class="counter-item">' + nums + "</span>";
   </script>
 </html>
