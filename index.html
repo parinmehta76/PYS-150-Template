@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PYS 150 Yes YoU Can</title>
+    <title>PYS-150 Frame</title>
     <!-- Favicon -->
-    <link href="kalash-logo-ld.jpg" id="faviconImg" rel="shortcut icon" />
+    <link href="pysLogo.png" id="faviconImg" rel="shortcut icon" />
     <link rel="stylesheet" href="custom.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="PYS 150 Yes You Can" />
-    <meta name="author" content="Kalash Infotech" />
+    <meta name="author" content="PYS-150 Frame" />
 
     <link
       rel="stylesheet"
@@ -19,46 +19,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XYVKNM3RBC"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-XYVKNM3RBC");
-    </script>
     <style>
       body {
         text-align: center;
-        background: linear-gradient(rgb(255, 103, 1), white, green);
+        background: linear-gradient(rgb(9, 215, 188), rgb(5, 63, 155));
         /* background-image: url("logo.png");
         background-repeat: no-repeat; */
       }
 
       .container {
         position: relative;
-      }
-
-      .topleft {
-        position: absolute;
-        top: 8px;
-        left: 16px;
-        font-size: 18px;
-      }
-
-      img {
-        width: 100%;
-        height: auto;
-        opacity: 0.3;
       }
 
       #final_result_div {
@@ -68,8 +44,8 @@
         -webkit-flex-direction: column;
         align-items: flex-end;
         width: 1080px;
-        height: 1194px;
-        background-image: url(template.png);
+        height: 1080px;
+        background-image: url(150pys.jpg);
       }
 
       #name_div {
@@ -77,11 +53,12 @@
         width: 450px;
         margin-right: 300px;
         padding-top: 52px;
+        margin-top: -30px;
         text-align: center;
         overflow: wrap;
         font-size: 47px;
         /* text-transform: uppercase; */
-        color: blue;
+        color: rgb(6, 6, 145);
         font-family: Optima;
         line-height: 1;
         font-weight: bold;
@@ -92,7 +69,7 @@
         width: 345px;
         height: 345px;
         margin-right: 346px;
-        margin-top: 693px;
+        margin-top: 540px;
         background: #e6e7ed;
         -moz-border-radius: 180px;
         -webkit-border-radius: 180px;
@@ -110,10 +87,6 @@
   </head>
 
   <body onload="set_offsets_for_final_result()" class="area">
-    <div class="container">
-      <img src="logo.png" alt="PYS Logo" />
-      <div class="topleft"></div>
-    </div>
     <div class="row">
       <div class="col-md-12">
         <div class="d-flex justify-content-center" id="spinner_container">
@@ -139,10 +112,26 @@
             <div class="col-md-4"></div>
           </div>
           <div class="row">
-            <h2>
-              PYS 150 Yes You Can !<br />
-              <!-- <b>"Shashan Vandana"</b> -->
-            </h2>
+            <p>
+              Starting from 2nd September 2010 , PYS is now on the verge of
+              acheiving yet another Milestone ie PYS 150 on 13 November 2022.
+            </p>
+            <p>
+              Lets celebrate this occasion and show our support for PYS 150 by downloading PYS-150 Frame
+            </p>
+              
+            <p>
+              Guidelines for image to upload
+            </p>
+            <p>
+              Image should be ONLY yours individual photo in decent attire
+            </p>
+            <p>
+              Any misuse of the frame shall attract Sections of The Information Technology (IT) Act, 2000.By clicking on download you agree to the terms of use.
+            </p>
+         
+            </h1>
+            <h2>PYS 150 Yes We Can !<br /></h2>
           </div>
           <form action="/action_page.php">
             <div class="form-group">
@@ -179,6 +168,7 @@
             Instagram and all other social media accounts
           </p>
         </div>
+        <!-- <i class="fa-brands fa-facebook"></i>   -->
         <div class="row">
           <div class="col-md-12">
             <div id="final_result_div" style="opacity: 0">
@@ -242,7 +232,7 @@
         document.getElementsByTagName("canvas")[0].style.opacity = "0";
 
         var link = document.createElement("a");
-        link.download = "Har-Ghar-Tiranga.jpg";
+        link.download = "PYS-150-Frame.jpg";
         link.href = document.getElementsByTagName("canvas")[0].toDataURL();
         link.click();
 
@@ -260,7 +250,7 @@
 
         document.getElementById("downloadBtn").disabled = false;
       };
-      img.src = "template.png";
+      img.src = "150pys.jpg";
       if (img.complete) img.onload();
     }
 
