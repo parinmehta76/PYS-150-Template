@@ -70,11 +70,11 @@
         -webkit-flex-direction: column;
         align-items: flex-end;
         width: 1080px;
-        height: 1080px;
-        background-image: url(150pys.jpg);
+        height: 1920px;
+        background-image: url(mahaRally.png);
       }
 
-      #name_div {
+      /* #name_div {
         height: 89px;
         width: 450px;
         margin-right: 300px;
@@ -83,27 +83,36 @@
         text-align: center;
         overflow: wrap;
         font-size: 47px;
-        /* text-transform: uppercase; */
+        text-transform: uppercase;
         color: rgb(6, 6, 145);
         font-family: Optima;
         line-height: 1;
         font-weight: bold;
-      }
+      } */
 
       #cropped_circle_image {
-        display: block;
+        /* display: block;
         width: 345px;
         height: 345px;
         margin-right: 346px;
         margin-top: 540px;
-        background: #e6e7ed;
-        -moz-border-radius: 180px;
-        -webkit-border-radius: 180px;
+        background: #e6e7ed; */
+        width: 778px;
+        height: 1246px;
+        padding: 10px;
+        border: 5px solid gray;
+        margin: 0;
+        /* -moz-border-radius: 180px;
+        -webkit-border-radius: 180px; */
         background-image: url();
         background-position: 50% 50%;
         background-repeat: no-repeat;
         background-size: cover;
         border: 1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom-left-radius: 1346px;
+        border-bottom-right-radius: 1346px;
       }
 
       /* #message_2 {
@@ -265,7 +274,7 @@
           <div class="col-md-12">
             <div id="final_result_div" style="opacity: 0">
               <div id="cropped_circle_image"></div>
-              <div id="name_div"></div>
+              <!-- <div id="name_div"></div> -->
             </div>
           </div>
         </div>
@@ -302,8 +311,8 @@
 
       e.preventDefault();
       // Set name
-      let nameDiv = document.getElementById("name_div");
-      nameDiv.innerHTML = document.getElementById("username").value;
+      // let nameDiv = document.getElementById("name_div");
+      // nameDiv.innerHTML = document.getElementById("username").value;
 
       // Remove div from last time if present
       let existingCanvas = document.getElementsByTagName("canvas")[0];
@@ -342,7 +351,7 @@
 
         document.getElementById("downloadBtn").disabled = false;
       };
-      img.src = "150pys.jpg";
+      img.src = "mahaRally.png";
       if (img.complete) img.onload();
     }
 
